@@ -10,7 +10,7 @@ mod chapter8 {
             t
         }
 
-        pub fn show_score(t: &HashMap<String, i32>) {
+        pub fn show_score(t: &mut HashMap<String, i32>) {
             for (key, value) in t {
                 println!("{}: {}", key, value);
             }
@@ -26,7 +26,7 @@ mod chapter8 {
 use self::chapter8::game_score::{create_game, increment_point, show_score};
 fn main() {
     let mut x = create_game();
-    show_score(&x);
+    show_score(&mut x);
     increment_point(String::from("Team Blue"), &mut x);
-    show_score(&x);
+    show_score(&mut x);
 }
