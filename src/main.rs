@@ -29,4 +29,5 @@ fn main() {
     show_score(&mut x);
     increment_point(String::from("Team Blue"), &mut x);
     show_score(&mut x);
+    println!("{:?}", x);
 }
